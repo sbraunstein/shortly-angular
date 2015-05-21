@@ -1,21 +1,9 @@
 <div id='container'>
 <!-- <input>shorten</input><button>Click me</button> -->
-<form name="myForm" ng-controller="ShortenController">
+<form name="myForm" ng-controller="ShortenController" ng-submit='addLink()'>
   <label>link:
-    <input type="url" name="input" ng-model="link.text" required>
+    <input type="url" name="input" ng-model="link.url" required>
   <label>
-  <div role="alert">
-    <span class="error" ng-show="myForm.input.$error.required">
-      Required!</span>
-    <span class="error" ng-show="myForm.input.$error.link">
-      Not valid link!</span>
-  </div>
-  <tt>text = {{link.text}}</tt><br/>
-  <tt>myForm.input.$valid = {{myForm.input.$valid}}</tt><br/>
-  <tt>myForm.input.$error = {{myForm.input.$error}}</tt><br/>
-  <tt>myForm.$valid = {{myForm.$valid}}</tt><br/>
-  <tt>myForm.$error.required = {{!!myForm.$error.required}}</tt><br/>
-  <tt>myForm.$error.link = {{!!myForm.$error.link}}</tt><br/>
  </form>
 <!-- Your code here -->
 

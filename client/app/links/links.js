@@ -15,4 +15,27 @@ angular.module('shortly.links', [])
 
  //  // Your code here
 
-});
+})
+.directive('pizza', function(){
+	return function(scope, ele, attr){
+	    ele.on('click', function(){
+	    	alert('woohoo pizza')
+	    })
+	}
+})
+.directive('slide', function(){
+	return {
+		enter: function(){}, 
+		leave: function(){}
+
+
+	}
+	// function(scope, ele, attr){
+	// 	ele.on('click', function(){
+
+	// 	})
+	// }
+
+	// }
+})
+

@@ -1,16 +1,18 @@
 angular.module('shortly.shorten', [])
 
-.controller('ShortenController', function ($scope, $window, $location, Links) {
+.controller('ShortenController', function ($scope, $window, $route, $location, Links) {
   // Your code here
   console.log($location)
   $scope.link = {
-  				text: ''
-  			   }
-  Links.currenturl
+  					url: ''
+  			    }
+  // Links.currenturl
   //TODO shorten the text
-  $scope.addLink = function(str){
+  $scope.addLink = function(){
  	//$window.localStorage.
- 	 Links.addToLinks($scope.url)
+ 	 Links.addToLinks($scope.link)
+ 	 $location.path('/links')
+
   }
 })
 
