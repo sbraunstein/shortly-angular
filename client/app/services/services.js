@@ -2,6 +2,20 @@ angular.module('shortly.services', [])
 
 .factory('Links', function ($http) {
   // Your code here
+  // var getLinks = function (url) {
+  //   return $http({
+  //     method: 'POST',
+  //     url: '/api/links',
+  //     data: url
+  //   })
+  //   .then(function (resp) {
+  //     return resp.data.token;
+  //   }); 
+  // }
+  // return { currenturl: '',
+  //             urls: [],
+  //             addToLinks: addToLinks
+  //             }
 })
 .factory('Auth', function ($http, $location, $window) {
   // Don't touch this Auth service!!!
@@ -29,6 +43,7 @@ angular.module('shortly.services', [])
       data: user
     })
     .then(function (resp) {
+      console.log('INSIDE SINGUP PROMISE RESPONSE', resp.data)
       return resp.data.token;
     });
   };
