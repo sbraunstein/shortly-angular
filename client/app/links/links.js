@@ -5,9 +5,13 @@ angular.module('shortly.links', [])
 	$scope.data = {links: [{},{},{}]};
 	// console.log($scope)
 	$scope.getLinks = function () {
-		return $scope.data.links
+		console.log('calling Links.getLinks inside LinksController')
+		Links.getLinks()
+		.then(function(res){
+			$scope.data.links = res
+		})
 	}
-	// $scope.getLinks()
+	$scope.getLinks()
 
  //  // Your code here
 
