@@ -1,3 +1,28 @@
-<div id='container'>
-  <!-- Your html here -->
+<div id='container' ng-controller='LinksController' ng-init=''  ng-model='data'>
+<!-- ng-init='getLinks()' -->
+  <!-- Your html here --> 
+  <!-- {{ data.links }} -->
+
+
+<div class='link' ng-repeat='link in data.links'>
+	<img src='../../assets/redirect_icon.png' pizza></img>
+	<div class='title'>{{link.title}}</div>
+	<a href="{{link.base_url}}/api/links/{{link.code}}" target="_blank">{{link.url}}</a>
+	<div class="visits">visits
+		
+		<div class="count">{{link.visits}}</div>
+
+	</div>
 </div>
+
+
+
+</div>
+
+<!-- "_id":"555e44d33aded1258a5354f7"
+"code":"3ad0d"
+"url":"http://yahoo.com/"
+"visits":0
+"base_url":"http://localhost:3000"
+"title":"Yahoo"
+"__v":0} -->
